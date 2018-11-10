@@ -23,13 +23,13 @@ public class PlayerInput : MonoBehaviour {
 	{
 		// Read the inputs.
 		Vector2 direction = new Vector2();
-		if(CrossPlatformInputManager.GetButton("left"))
+		if(CrossPlatformInputManager.GetButton("Left"))
 			direction += new Vector2(-1,0);
-		if(CrossPlatformInputManager.GetButton("right"))
+		if(CrossPlatformInputManager.GetButton("Right"))
 			direction += new Vector2(1,0);
-		if(CrossPlatformInputManager.GetButton("up"))
+		if(CrossPlatformInputManager.GetButton("Up"))
 			direction += new Vector2(0,1);
-		if(CrossPlatformInputManager.GetButton("down"))
+		if(CrossPlatformInputManager.GetButton("Down"))
 			direction += new Vector2(0,-1);
 		// Pass all parameters to the character control script.
 		m_Controller.Move(direction.normalized);

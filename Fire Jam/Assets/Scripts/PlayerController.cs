@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
 	[SerializeField] private float m_MaxSpeed = 10f;                    // The fastest the player can travel.
-	[SerializeField] private float m_Accel = .1f;
+	[SerializeField] private float m_Accel = 10f;
+	[SerializeField] private float m_Decel = 10f;
 
 	private Animator m_Anim;            // Reference to the player's animator component.
 	private Rigidbody2D m_Rigidbody2D;
@@ -25,8 +26,21 @@ public class PlayerController : MonoBehaviour {
 
 	public void Move(Vector2 move)
 	{
-		// Move the character
-		m_Rigidbody2D.AddForce(move*m_Accel);
+		// Decellerate faster than accelerate
+		float newX = m_Rigidbody2D.velocity.x+move.x;
+		if( Mathf.Abs(newX) > Mathf.Abs(m_Rigidbody2D.velocity.x) )
+			move.x*=m_Accel;
+		else
+			move.x*=m_Decel;
+
+		float newY = m_Rigidbody2D.velocity.y+move.y;
+		if( Mathf.Abs(newY) > Mathf.Abs(m_Rigidbody2D.velocity.y) )
+			move.y*=m_Accel;
+		else
+			move.y*=m_Decel;
+
+		m_Rigidbody2D.AddForce(move);
+
 		if(m_Rigidbody2D.velocity.magnitude > m_MaxSpeed){
 			m_Rigidbody2D.velocity = m_Rigidbody2D.velocity.normalized*m_MaxSpeed;
 		}
