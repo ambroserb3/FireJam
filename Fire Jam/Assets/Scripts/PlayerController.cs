@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-	[SerializeField] private float m_MaxSpeed = 10f;                    // The fastest the player can travel.
-	[SerializeField] private float m_Accel = 10f;
-	[SerializeField] private float m_Decel = 10f;
+    [SerializeField] public float m_MaxSpeed;                    // The fastest the player can travel.
+	[SerializeField] public float m_Accel;
+	[SerializeField] public float m_Decel;
 
 	private Animator m_Anim;            // Reference to the player's animator component.
 	private Rigidbody2D m_Rigidbody2D;
