@@ -5,6 +5,9 @@ using UnityEngine;
 public class Constants : MonoBehaviour {
 
     public static float sizeScale = 3.2f;
+    public static int playerHealth = 100;
+    public static int towerHealth = 1000;
+
 
 	// Use this for initialization
 	void Start () {
