@@ -6,30 +6,36 @@ public class MapTile : MonoBehaviour {
 
     public GameObject FirePrefab;
     public int igniteTime;
-    public int extinguishHP; //how many spurts of water it needs to douse
-
     public bool isLit = false;
     public MapTile[,] grid;
 
-    public GameManager GM;
-
-    private int waterHealth;
+    public List<MapTile> Adjacent;
     private int fireHealth;
 
     private int x;
     private int y;
 
 	void Awake () {
-        waterHealth = extinguishHP;
         fireHealth = igniteTime;
 	}
 
     public void Burn(){
-        fireHealth-=1;
-        if(fireHealth==0)
-            Ignite();
+        if(!isLit){
+            fireHealth-=1;
+            if(fireHealth<=0){
+                Ignite();
+                fireHealth = igniteTime;
+            }
+        }
     }
 
+    public void Spread(){
+        foreach(MapTile t in Adjacent){
+            if(!t.isLit){
+                t.Burn();
+            }
+        }
+    }
     public void Ignite(){
         if(!isLit){
             GameObject fire = GameObject.Instantiate(FirePrefab, transform.position, transform.rotation, transform);
@@ -44,16 +50,20 @@ public class MapTile : MonoBehaviour {
         this.grid = grid;
     }
 
-    public List<MapTile> GetAdjacent(){
-		List<MapTile> res = new List<MapTile>();
+    public void Wet(){
+        gameObject.GetComponentInChildren<FireBehavior>().Extinguish();
+        fireHealth = igniteTime;
+    }
+
+    public void SetAdjacent(){
+        Adjacent = new List<MapTile>();
 		if(x>0)
-			res.Add(grid[x-1, y]);
+			Adjacent.Add(grid[x-1, y]);
 		if(y>0)
-			res.Add(grid[x, y-1]);
+			Adjacent.Add(grid[x, y-1]);
 		if(x<grid.GetUpperBound(0))
-			res.Add(grid[x+1, y]);
+			Adjacent.Add(grid[x+1, y]);
 		if(y<grid.GetUpperBound(1))
-			res.Add(grid[x, y+1]);
-		return res;
-	}
+			Adjacent.Add(grid[x, y+1]);
+    }
 }

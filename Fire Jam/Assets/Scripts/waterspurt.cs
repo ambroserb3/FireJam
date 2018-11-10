@@ -6,17 +6,33 @@ public class Waterspurt : MonoBehaviour {
 
     public float speed;
     private Vector3 vel;
+    public MapTile[,] grid;
+
+    private int oldX;
+    private int oldY;
+
 
 	// Use this for initialization
-	void Start () {
+	public void Init (Vector3 position, Vector2 direction, MapTile[,] grid) {
+        transform.position = position;
+        SetDir(direction);
+        this.grid = grid;
     }
-
-    // Update is called once per frame
-    void FixedUpdate () {
+    void Update () {
         transform.Translate(vel * Time.deltaTime, Space.World);
         int x = (int)(transform.position.x+0.5f);
 		int y = (int)(transform.position.y+0.5f);
-		//grid[x,y].Burn();
+        if(x != oldX || y!= oldY){
+            oldX = x;
+            oldY = y;
+            if(x<0 || y<0 || x>grid.GetUpperBound(0) || y>grid.GetUpperBound(1)){
+                GameObject.Destroy(gameObject);
+            }
+            else if(grid[x,y].isLit){
+		        grid[x,y].Wet();
+                GameObject.Destroy(gameObject);
+            }
+        }
     }
 
     public void SetDir(Vector2 move){

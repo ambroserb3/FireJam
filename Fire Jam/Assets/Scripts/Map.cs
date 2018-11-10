@@ -7,7 +7,8 @@ public class Map : MonoBehaviour {
 	[SerializeField] private int m_MapSize;
 	[SerializeField] private GameObject m_TilePrefab;
 	public MapTile[,] grid;
-
+	public float SpreadFreq;
+	private float SpreadRate;
 	public GameObject[] TileList;
 
 	// Use this for initialization
@@ -18,11 +19,21 @@ public class Map : MonoBehaviour {
 				spawnTile(i,j);
 			}
 		}
+		foreach(MapTile t in grid){
+			t.SetAdjacent();
+		}
+		SpreadRate = 1f/SpreadFreq;
+		StartCoroutine(Spread());
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
+	IEnumerator Spread(){
+		while(true){
+			foreach(MapTile t in grid){
+				if(t.isLit)
+					t.Spread();
+			}
+			yield return new WaitForSeconds(SpreadRate);
+		}
 	}
 
 	private void spawnTile(int x, int y){
