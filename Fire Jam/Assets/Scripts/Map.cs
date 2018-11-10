@@ -22,4 +22,11 @@ public class Map : MonoBehaviour {
 	void Update () {
 		
 	}
+
+	private void spawnTile(int x, int y){
+		GameObject g = GameObject.Instantiate(m_TilePrefab, new Vector3(x,y,0), Quaternion.identity);
+		MapTile tile = g.GetComponent<MapTile>();
+		grid[x,y] = tile;
+		tile.Init(x, y, grid);
+	}
 }
