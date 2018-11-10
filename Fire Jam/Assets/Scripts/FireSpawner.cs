@@ -11,8 +11,8 @@ public class FireSpawner : MonoBehaviour {
 	}
 	
 	void FixedUpdate () {
-		int x = (int)transform.position.x;
-		int y = (int)transform.position.y;
+		int x = (int)(transform.position.x+0.5f);
+		int y = (int)(transform.position.y+0.5f);
 		grid[x,y].Ignite();
 	}
 }

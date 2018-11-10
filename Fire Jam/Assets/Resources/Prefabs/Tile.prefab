@@ -16,6 +16,14 @@ Prefab:
       propertyPath: isLit
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: igniteTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: maxHealth
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 0}
@@ -63,8 +71,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FirePrefab: {fileID: 1613912222501060, guid: d708f9373cdd6446ab698ce0d074bbf6, type: 2}
-  igniteTime: 0
-  maxHealth: 0
+  igniteTime: 2
+  maxHealth: 1
   isLit: 0
   GM: {fileID: 0}
 --- !u!212 &212318282236189878

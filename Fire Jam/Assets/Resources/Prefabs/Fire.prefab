@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212158372174356132}
   - component: {fileID: 114423422357580068}
   - component: {fileID: 82092792224603856}
+  - component: {fileID: 65052502713095606}
   m_Layer: 0
   m_Name: Fire
   m_TagString: Untagged
@@ -42,6 +43,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65052502713095606
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1613912222501060}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &82092792224603856
 AudioSource:
   m_ObjectHideFlags: 1
