@@ -11,6 +11,11 @@ Prefab:
       propertyPath: isWater
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: spurt
+      value: 
+      objectReference: {fileID: 114774174907247542, guid: d4fb5333dfa8743398c6271469e173bb,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 0}
