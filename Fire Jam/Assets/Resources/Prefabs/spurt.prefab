@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114774174907247542}
   - component: {fileID: 70200473202251480}
   m_Layer: 0
-  m_Name: Spurt
+  m_Name: spurt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
