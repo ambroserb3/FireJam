@@ -9,6 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/splash.unity
+    guid: 72245a4418cd0f840a84ec8e19a50972
+  - enabled: 1
     path: Assets/Scenes/TitleScene.unity
     guid: 92149a28c3aad07438c4c88aa106cddc
+  - enabled: 1
+    path: Assets/Scenes/Matchmaking.unity
+    guid: 9829bd6cb8d83104583ebc2705c19efc
+  - enabled: 1
+    path: Assets/Scenes/Main.unity
+    guid: 2b5b5640789cb48da9225eb67667c008
   m_configObjects: {}
