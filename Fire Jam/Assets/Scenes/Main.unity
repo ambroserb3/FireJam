@@ -281,7 +281,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -304,7 +304,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 7.5, y: 7.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -353,6 +353,43 @@ MonoBehaviour:
   m_MapSize: 16
   m_TilePrefab: {fileID: 1156864016883946, guid: 314545a7726dc43678bb35fa6263dafd,
     type: 2}
+--- !u!1 &714610457 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1458747402441322, guid: 79d86ed7fc8884f08914a23c3cb28329,
+    type: 2}
+  m_PrefabInternal: {fileID: 1605865232}
+--- !u!114 &714610458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 714610457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 121
+    i1: 216
+    i2: 110
+    i3: 215
+    i4: 252
+    i5: 136
+    i6: 132
+    i7: 240
+    i8: 137
+    i9: 20
+    i10: 162
+    i11: 60
+    i12: 60
+    i13: 178
+    i14: 131
+    i15: 41
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
 --- !u!1001 &1605865232
 Prefab:
   m_ObjectHideFlags: 0
@@ -362,11 +399,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4143746432457808, guid: 79d86ed7fc8884f08914a23c3cb28329, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4143746432457808, guid: 79d86ed7fc8884f08914a23c3cb28329, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4143746432457808, guid: 79d86ed7fc8884f08914a23c3cb28329, type: 2}
       propertyPath: m_LocalPosition.z
@@ -392,12 +429,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114959639235904176, guid: 79d86ed7fc8884f08914a23c3cb28329,
-        type: 2}
-      propertyPath: m_LocalPlayerAuthority
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 114504306875282896, guid: 79d86ed7fc8884f08914a23c3cb28329, type: 2}
+    - {fileID: 114959639235904176, guid: 79d86ed7fc8884f08914a23c3cb28329, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 79d86ed7fc8884f08914a23c3cb28329, type: 2}
   m_IsPrefabParent: 0
