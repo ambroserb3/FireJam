@@ -36,10 +36,6 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void Update(){
-        if (!isWater){
-            GM.fPosX = (int)transform.position.x;
-            GM.fPosY = (int)transform.position.y;
-        }
     }
 
 

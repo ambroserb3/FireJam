@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-    public int fPosX;
-    public int fPosY;
+	public GameObject WaterPlayerPrefab;
+	public GameObject FirePlayerPrefab;
+
 	// Use this for initialization
 	void Start () {
-		
+		GameObject.Instantiate(WaterPlayerPrefab);
+		GameObject.Instantiate(FirePlayerPrefab);
 	}
 	
 	// Update is called once per frame
