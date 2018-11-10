@@ -29,7 +29,8 @@ public class PlayerController : MonoBehaviour {
         bulletRate = 1f/bulletFreq;
     }
 
-    private void Update(){
+    void FixedUpdate(){
+        Shoot();
     }
 
 

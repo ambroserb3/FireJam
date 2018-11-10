@@ -32,6 +32,15 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Name
+      value: Grass
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4a7296db0e9b8437687642cf3fd51f21,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 0}
@@ -106,9 +115,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FirePrefab: {fileID: 1613912222501060, guid: d708f9373cdd6446ab698ce0d074bbf6, type: 2}
   igniteTime: 20
-  extinguishHP: 1
   isLit: 0
-  GM: {fileID: 0}
+  Adjacent: []
 --- !u!212 &212318282236189878
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -144,7 +152,7 @@ SpriteRenderer:
   m_SortingLayerID: -1767698329
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e5d494896d17f4b6da7d70eb79c5397a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4a7296db0e9b8437687642cf3fd51f21, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
