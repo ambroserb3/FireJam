@@ -1,11 +1,13 @@
 fileFormatVersion: 2
-guid: c23bb72367f9744f2a04edcbb3204a81
+guid: efa75007343974c96b128342bb028ae1
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Bubbles_0
-    21300002: Bubbles_1
-    21300004: Bubbles_2
-    21300006: Bubbles_3
+    21300000: waterperson_0
+    21300002: waterperson_1
+    21300004: waterperson_2
+    21300006: waterperson_3
+    21300008: waterperson_4
+    21300010: waterperson_5
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -110,7 +112,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bubbles_0
+      name: waterperson_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,13 +126,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 049237928c58f4fa3b7a0c7bd11cb17d
+      spriteID: 5f8536aaa13084293a0a97758f5c5945
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bubbles_1
+      name: waterperson_1
       rect:
         serializedVersion: 2
         x: 32
@@ -144,13 +146,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17e39e1fb5d9748c88304f21946df5d6
+      spriteID: 0d62528e7208e403f9a3a8b5490adea0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bubbles_2
+      name: waterperson_2
       rect:
         serializedVersion: 2
         x: 64
@@ -164,13 +166,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 431406a0562ab44338beaf2c8ff29c06
+      spriteID: d41b2f1cd7a7248c4931ee3b90692403
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bubbles_3
+      name: waterperson_3
       rect:
         serializedVersion: 2
         x: 96
@@ -184,7 +186,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3a3100b60a654cd08a89e7489f6737a
+      spriteID: 945908581858c46babf136e8c56b20e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterperson_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c75655f1f0742ce8bf00318b0b97a6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterperson_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c8a7f49beced45bca5efc4186c5eb30
       vertices: []
       indices: 
       edges: []
@@ -192,7 +234,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d104b62b0326a4436a3fa9bc5c365e71
+    spriteID: 9a3331a7ec0314c5ca7abd4221f67ebf
     vertices: []
     indices: 
     edges: []

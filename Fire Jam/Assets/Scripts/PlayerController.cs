@@ -4,11 +4,22 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-	[SerializeField] private float m_MaxSpeed = 10f;                    // The fastest the player can travel.
-	[SerializeField] private float m_Accel = 10f;
-	[SerializeField] private float m_Decel = 10f;
+    [SerializeField] public float m_MaxSpeed;                    // The fastest the player can travel.
+	[SerializeField] public float m_Accel;
+	[SerializeField] public float m_Decel;
 
-	private Animator m_Anim;            // Reference to the player's animator component.
+    public GameManager GM;
+
+    public float bulletSpeed;
+    public float bulletOfteness;
+    public bool isWater;
+    public waterspurt spurt;
+
+    private float lastShotTime;
+
+    private Vector2 lastMove;
+
+    private Animator m_Anim;            // Reference to the player's animator component.
 	private Rigidbody2D m_Rigidbody2D;
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 
@@ -18,10 +29,18 @@ public class PlayerController : MonoBehaviour {
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
 	}
 
+    private void Start() {
+        lastShotTime = Time.time;
+        lastMove = new Vector2(0,1);
+        transform.localScale = Constants.sizeScale * transform.localScale;
+    }
 
-	private void FixedUpdate()
-	{
-	}
+    private void Update(){
+        if (!isWater){
+            GM.fPosX = (int)transform.position.x;
+            GM.fPosY = (int)transform.position.y;
+        }
+    }
 
 
 	public void Move(Vector2 move)
@@ -48,7 +67,46 @@ public class PlayerController : MonoBehaviour {
 	}
 
 
-	private void Flip()
+    public void MoveW(Vector2 move){
+        if (isWater){
+            transform.rotation = Quaternion.LookRotation(Vector3.forward, move);
+            transform.Translate(move * m_MaxSpeed * Time.deltaTime, Space.World);
+            lastMove = move;
+        }
+    }
+
+
+    public void MoveF(Vector2 move) {
+        if(!isWater) {
+            transform.rotation = Quaternion.LookRotation(Vector3.forward, move);
+            transform.Translate(move * m_MaxSpeed * Time.deltaTime, Space.World);
+        }
+    }
+
+
+
+    public void Shoot(){
+        float currTime = Time.time;
+        if (currTime-lastShotTime> bulletOfteness && isWater){
+            waterspurt sput = Instantiate(spurt);
+            sput.transform.position = transform.position;
+            sput.SetDir(lastMove);
+            lastShotTime = currTime;
+        }
+    }
+
+    public void Ignite() {
+        GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sound/flame");
+        GetComponent<AudioSource>().Play();
+    }
+
+    public void Douse() {
+        print("dousing");
+        GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sound/extinguish");
+        GetComponent<AudioSource>().Play();
+    }
+
+    private void Flip()
 	{
 		// Switch the way the player is labelled as facing.
 		m_FacingRight = !m_FacingRight;

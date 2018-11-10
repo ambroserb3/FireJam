@@ -1,11 +1,13 @@
 fileFormatVersion: 2
-guid: c23bb72367f9744f2a04edcbb3204a81
+guid: 8a3f52098e90a4aeab22635c17d5eb2d
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Bubbles_0
-    21300002: Bubbles_1
-    21300004: Bubbles_2
-    21300006: Bubbles_3
+    21300000: fireperson_0
+    21300002: fireperson_1
+    21300004: fireperson_2
+    21300006: fireperson_3
+    21300008: fireperson_4
+    21300010: fireperson_5
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -110,7 +112,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bubbles_0
+      name: fireperson_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,13 +126,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 049237928c58f4fa3b7a0c7bd11cb17d
+      spriteID: 2bd21a04d2e034211ab0b88ba4f1d8ee
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bubbles_1
+      name: fireperson_1
       rect:
         serializedVersion: 2
         x: 32
@@ -144,13 +146,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17e39e1fb5d9748c88304f21946df5d6
+      spriteID: 8ec119ef3d6534eb9ba7ff32eb64ec44
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bubbles_2
+      name: fireperson_2
       rect:
         serializedVersion: 2
         x: 64
@@ -164,13 +166,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 431406a0562ab44338beaf2c8ff29c06
+      spriteID: ac3121964bb054922a7e84bebd9c22fb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bubbles_3
+      name: fireperson_3
       rect:
         serializedVersion: 2
         x: 96
@@ -184,7 +186,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3a3100b60a654cd08a89e7489f6737a
+      spriteID: 12a5d6249ba7e41eeaf89267e62ab365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireperson_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1825bd682484442ee82f859cb21538de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireperson_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c2650458ba8644e988433d121ddecc0
       vertices: []
       indices: 
       edges: []
@@ -192,7 +234,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d104b62b0326a4436a3fa9bc5c365e71
+    spriteID: dd2f501028f2d408ea37084d4adeff96
     vertices: []
     indices: 
     edges: []

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour {
+public class Constants : MonoBehaviour {
 
-    public int fPosX;
-    public int fPosY;
+    public static float sizeScale = 3.2f;
+
 	// Use this for initialization
 	void Start () {
 		
