@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Decel: 180
   GM: {fileID: 0}
   bulletSpeed: 4
-  bulletOfteness: 0.5
+  bulletFreq: 10
   isWater: 1
   spurt: {fileID: 114168551103901190, guid: 97fdbd626a70c7647b081a420a77d8f9, type: 2}
 --- !u!114 &114533328011913086

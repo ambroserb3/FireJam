@@ -11,7 +11,8 @@ public class PlayerController : MonoBehaviour {
     public GameManager GM;
 
     public float bulletSpeed;
-    public float bulletOfteness;
+    public float bulletFreq;
+    private float bulletRate;
     public bool isWater;
     public Waterspurt spurt;
     MapTile[,] grid;
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour {
         grid = GameObject.FindWithTag("Map").GetComponent<Map>().grid;
         lastShotTime = Time.time;
         lastMove = new Vector2(0,1);
+        bulletRate = 1f/bulletFreq;
     }
 
     private void Update(){
@@ -44,14 +46,28 @@ public class PlayerController : MonoBehaviour {
         if(!isWater) {
             transform.rotation = Quaternion.LookRotation(Vector3.forward, move);
             transform.Translate(move * m_MaxSpeed * Time.deltaTime, Space.World);
+            Constrain();
         }
     }
 
-
+    void Constrain(){
+        if(transform.position.x <= -0.4f){
+            transform.SetPositionAndRotation( new Vector3(-0.4f, transform.position.y, transform.position.z), transform.rotation);
+        }
+        if(transform.position.y <= -0.4f){
+            transform.SetPositionAndRotation( new Vector3(transform.position.x, -0.4f, transform.position.z), transform.rotation);
+        }
+        if(transform.position.x >=15.4f){
+            transform.SetPositionAndRotation( new Vector3(15.4f, transform.position.y, transform.position.z), transform.rotation);
+        }
+        if(transform.position.y >=15.4f){
+            transform.SetPositionAndRotation( new Vector3(transform.position.x, 15.4f, transform.position.z), transform.rotation);
+        }
+    }
 
     public void Shoot(){
         float currTime = Time.time;
-        if (currTime-lastShotTime> bulletOfteness && isWater){
+        if (currTime-lastShotTime> bulletRate && isWater){
             Waterspurt sput = Instantiate(spurt);
             sput.Init(transform.position, lastMove, grid);
             lastShotTime = currTime;

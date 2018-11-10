@@ -37,6 +37,7 @@ public class Waterspurt : MonoBehaviour {
 
     public void SetDir(Vector2 move){
         vel = speed * move;
+        vel = Quaternion.AngleAxis(Random.Range(-15,15), Vector3.forward) * vel;
         transform.rotation = Quaternion.LookRotation(Vector3.forward, vel);
     }
 
