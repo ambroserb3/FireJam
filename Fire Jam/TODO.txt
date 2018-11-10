@@ -6,3 +6,5 @@ Things that NEED to be implemented:
 Things it'd be nice to have:
 	1. Stop walking animation when static
 	2. Networking
+	3. Multilayered Trees (that you can walk under)
+	4. Move water player's spurt a little foward (so it's not inside them)

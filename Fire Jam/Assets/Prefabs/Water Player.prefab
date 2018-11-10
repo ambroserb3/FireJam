@@ -77,7 +77,7 @@ MonoBehaviour:
   m_Decel: 180
   bulletSpeed: 4
   bulletOfteness: 0.5
-  isWater: 1
+  isWater: 0
   spurt: {fileID: 114774174907247542, guid: d4fb5333dfa8743398c6271469e173bb, type: 2}
 --- !u!114 &114992331744338408
 MonoBehaviour:

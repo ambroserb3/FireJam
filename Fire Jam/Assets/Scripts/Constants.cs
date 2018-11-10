@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Constants : MonoBehaviour {
 
-    public static float sizeScale = 3.3f;
+    public static float sizeScale = 3.2f;
 
 	// Use this for initialization
 	void Start () {

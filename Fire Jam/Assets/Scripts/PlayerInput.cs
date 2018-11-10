@@ -18,24 +18,25 @@ public class PlayerInput : MonoBehaviour {
 	void Update()
 	{
         // Read the inputs.
-        Vector2 direction = new Vector2();
-        if(CrossPlatformInputManager.GetButton("Left"))
-            direction += new Vector2(-1,0);
-        if(CrossPlatformInputManager.GetButton("Right"))
-            direction += new Vector2(1,0);
-        if(CrossPlatformInputManager.GetButton("Up"))
-            direction += new Vector2(0,1);
-        if(CrossPlatformInputManager.GetButton("Down"))
-            direction += new Vector2(0,-1);
+        Vector2 directionW = new Vector2();
+        directionW += new Vector2 (CrossPlatformInputManager.GetAxis("wHor"), 
+                                   CrossPlatformInputManager.GetAxis("wVert"));
 
-        bool isWater = CrossPlatformInputManager.GetButton("waterMove");
+        Vector2 directionF = new Vector2();
+        directionF += new Vector2(CrossPlatformInputManager.GetAxis("fHor"), 
+                                  CrossPlatformInputManager.GetAxis("fVert"));
 
-		// Pass all parameters to the character control script.
-        if (direction.magnitude > epsilon){
-            m_Controller.Move2(direction.normalized, isWater);
+        // Pass all parameters to the character control script.
+        if(directionW.magnitude > epsilon){
+            m_Controller.MoveW(directionW.normalized);
+        }
+
+        if(directionF.magnitude > epsilon){
+            m_Controller.MoveF(directionF.normalized);
         }
 
         if (Input.GetButton("Shoot")){
+            m_Controller.Douse();
             m_Controller.Shoot();
         }
 	}

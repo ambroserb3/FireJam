@@ -63,13 +63,23 @@ public class PlayerController : MonoBehaviour {
 	}
 
 
-    public void Move2(Vector2 move, bool isWaterMove){
-        if (isWaterMove == isWater){
+    public void MoveW(Vector2 move){
+        if (isWater){
             transform.rotation = Quaternion.LookRotation(Vector3.forward, move);
             transform.Translate(move * m_MaxSpeed * Time.deltaTime, Space.World);
             lastMove = move;
         }
     }
+
+
+    public void MoveF(Vector2 move) {
+        if(!isWater) {
+            transform.rotation = Quaternion.LookRotation(Vector3.forward, move);
+            transform.Translate(move * m_MaxSpeed * Time.deltaTime, Space.World);
+        }
+    }
+
+
 
     public void Shoot(){
         float currTime = Time.time;
@@ -79,6 +89,17 @@ public class PlayerController : MonoBehaviour {
             sput.SetDir(lastMove);
             lastShotTime = currTime;
         }
+    }
+
+    public void Ignite() {
+        GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sound/flame");
+        GetComponent<AudioSource>().Play();
+    }
+
+    public void Douse() {
+        print("dousing");
+        GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sound/extinguish");
+        GetComponent<AudioSource>().Play();
     }
 
     private void Flip()

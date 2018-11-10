@@ -24,9 +24,13 @@ public class MapTile : MonoBehaviour {
 
     private void Ignite(){
         GetComponent<SpriteRenderer>().sprite = fireImg;
+        GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sound/flame");
+        GetComponent<AudioSource>().Play();
     }
 
     private void Douse() {
         GetComponent<SpriteRenderer>().sprite = img;
+        GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sound/extinguish");
+        GetComponent<AudioSource>().Play();
     }
 }
