@@ -9,8 +9,8 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		GameObject.Instantiate(WaterPlayerPrefab);
-		GameObject.Instantiate(FirePlayerPrefab);
+		//GameObject.Instantiate(WaterPlayerPrefab);
+		//GameObject.Instantiate(FirePlayerPrefab);
 	}
 	
 	// Update is called once per frame
