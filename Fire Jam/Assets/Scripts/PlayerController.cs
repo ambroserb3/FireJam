@@ -8,7 +8,16 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField] public float m_Accel;
 	[SerializeField] public float m_Decel;
 
-	private Animator m_Anim;            // Reference to the player's animator component.
+    public float bulletSpeed;
+    public float bulletOfteness;
+    public bool isWater;
+    public waterspurt spurt;
+
+    private float lastShotTime;
+
+    private Vector2 lastMove;
+
+    private Animator m_Anim;            // Reference to the player's animator component.
 	private Rigidbody2D m_Rigidbody2D;
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 
@@ -18,8 +27,12 @@ public class PlayerController : MonoBehaviour {
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
 	}
 
+    private void Start() {
+        lastShotTime = Time.time;
+        lastMove = new Vector2(0,1);
+    }
 
-	private void FixedUpdate()
+    private void FixedUpdate()
 	{
 	}
 
@@ -48,7 +61,23 @@ public class PlayerController : MonoBehaviour {
 	}
 
 
-	private void Flip()
+    public void Move2(Vector2 move){
+        transform.rotation = Quaternion.LookRotation(Vector3.forward, move);
+        transform.Translate(move * m_MaxSpeed * Time.deltaTime, Space.World);
+        lastMove = move;
+    }
+
+    public void Shoot(){
+        float currTime = Time.time;
+        if (currTime-lastShotTime> bulletOfteness && isWater){
+            waterspurt sput = Instantiate(spurt);
+            sput.transform.position = transform.position;
+            sput.SetDir(lastMove);
+            lastShotTime = currTime;
+        }
+    }
+
+    private void Flip()
 	{
 		// Switch the way the player is labelled as facing.
 		m_FacingRight = !m_FacingRight;

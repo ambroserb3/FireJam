@@ -9,50 +9,49 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1458747402441322}
+  m_RootGameObject: {fileID: 1697138852558024}
   m_IsPrefabAsset: 1
---- !u!1 &1458747402441322
+--- !u!1 &1697138852558024
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4143746432457808}
-  - component: {fileID: 114104961201033668}
-  - component: {fileID: 114745948626391058}
-  - component: {fileID: 212376961281818352}
-  - component: {fileID: 95625590199230742}
+  - component: {fileID: 4353877868833746}
+  - component: {fileID: 212639970671551554}
+  - component: {fileID: 95533912263360594}
+  - component: {fileID: 114774174907247542}
   m_Layer: 0
-  m_Name: Fire Player
+  m_Name: spurt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4143746432457808
+--- !u!4 &4353877868833746
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1458747402441322}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.03, y: 8.53, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_GameObject: {fileID: 1697138852558024}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.09, y: 5.75, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95625590199230742
+--- !u!95 &95533912263360594
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1458747402441322}
+  m_GameObject: {fileID: 1697138852558024}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 19e205da78f334bd2978ab2fe42114ba, type: 2}
+  m_Controller: {fileID: 9100000, guid: 14b9168b9785e4813a652626a7aa9c4e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -61,38 +60,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114104961201033668
+--- !u!114 &114774174907247542
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1458747402441322}
+  m_GameObject: {fileID: 1697138852558024}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a40b293da7df400eb64367dcb68986f, type: 3}
-  m_Name: Fire Player
+  m_Script: {fileID: 11500000, guid: 7acf60b4f650142efb6166d915d4afa3, type: 3}
+  m_Name: 
   m_EditorClassIdentifier: 
-  m_MaxSpeed: 3
-  m_Accel: 50
-  m_Decel: 179.54
-  isWater: 0
---- !u!114 &114745948626391058
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1458747402441322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23ab766c711c24819b7be82ec8a640a8, type: 3}
-  m_Name: Fire Player
-  m_EditorClassIdentifier: 
---- !u!212 &212376961281818352
+  speed: 5
+--- !u!212 &212639970671551554
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1458747402441322}
+  m_GameObject: {fileID: 1697138852558024}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -122,12 +107,12 @@ SpriteRenderer:
   m_SortingLayerID: 949143019
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8a3f52098e90a4aeab22635c17d5eb2d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c23bb72367f9744f2a04edcbb3204a81, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

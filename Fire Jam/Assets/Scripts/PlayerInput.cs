@@ -7,19 +7,15 @@ public class PlayerInput : MonoBehaviour {
 
 	private PlayerController m_Controller;
 
+    readonly float epsilon =.01f;
+
 	private void Awake()
 	{
 		m_Controller = GetComponent<PlayerController>();
 	}
 
 
-	private void Update()
-	{
-
-	}
-
-
-	private void FixedUpdate()
+	void Update()
 	{
 		// Read the inputs.
 		Vector2 direction = new Vector2();
@@ -32,6 +28,12 @@ public class PlayerInput : MonoBehaviour {
 		if(CrossPlatformInputManager.GetButton("Down"))
 			direction += new Vector2(0,-1);
 		// Pass all parameters to the character control script.
-		m_Controller.Move(direction.normalized);
+        if (direction.magnitude > epsilon){
+            m_Controller.Move2(direction.normalized);
+        }
+
+        if (Input.GetButton("Shoot")){
+            m_Controller.Shoot();
+        }
 	}
 }
