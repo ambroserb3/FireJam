@@ -7,7 +7,8 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1458747402441322}
   m_IsPrefabParent: 0
@@ -25,7 +26,6 @@ GameObject:
   - component: {fileID: 95625590199230742}
   - component: {fileID: 82622715556325504}
   - component: {fileID: 70441851782646044}
-  - component: {fileID: 114639575645631594}
   - component: {fileID: 114087594166713818}
   m_Layer: 0
   m_Name: Fire Player
@@ -205,17 +205,6 @@ MonoBehaviour:
   bulletOfteness: 0
   isWater: 0
   spurt: {fileID: 0}
---- !u!114 &114639575645631594
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1458747402441322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58e78a64a23d340d89e082d41836a9fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114745948626391058
 MonoBehaviour:
   m_ObjectHideFlags: 1

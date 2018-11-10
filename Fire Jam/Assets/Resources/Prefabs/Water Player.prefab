@@ -11,7 +11,8 @@ Prefab:
       propertyPath: isWater
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1634434005815888}
   m_IsPrefabParent: 0
@@ -28,7 +29,6 @@ GameObject:
   - component: {fileID: 95053270751592070}
   - component: {fileID: 114129308424131364}
   - component: {fileID: 70638832911076378}
-  - component: {fileID: 114953306203208340}
   m_Layer: 0
   m_Name: Water Player
   m_TagString: Untagged
@@ -101,17 +101,6 @@ MonoBehaviour:
   bulletOfteness: 0.5
   isWater: 1
   spurt: {fileID: 114774174907247542, guid: d4fb5333dfa8743398c6271469e173bb, type: 2}
---- !u!114 &114953306203208340
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1634434005815888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47eed7d0e4444808b12955b98bce5ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114992331744338408
 MonoBehaviour:
   m_ObjectHideFlags: 1
