@@ -6,17 +6,21 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: isWater
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 0}
+  m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1634434005815888}
-  m_IsPrefabAsset: 1
+  m_IsPrefabParent: 0
 --- !u!1 &1634434005815888
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
+  serializedVersion: 5
   m_Component:
   - component: {fileID: 4072146633489902}
   - component: {fileID: 212860344548345850}
@@ -24,6 +28,7 @@ GameObject:
   - component: {fileID: 95053270751592070}
   - component: {fileID: 114129308424131364}
   - component: {fileID: 70638832911076378}
+  - component: {fileID: 114953306203208340}
   m_Layer: 0
   m_Name: Water Player
   m_TagString: Untagged
@@ -34,7 +39,7 @@ GameObject:
 --- !u!4 &4072146633489902
 Transform:
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1634434005815888}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -47,7 +52,7 @@ Transform:
 --- !u!70 &70638832911076378
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1634434005815888}
   m_Enabled: 1
@@ -63,7 +68,7 @@ CapsuleCollider2D:
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1634434005815888}
   m_Enabled: 1
@@ -80,7 +85,7 @@ Animator:
 --- !u!114 &114129308424131364
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1634434005815888}
   m_Enabled: 1
@@ -91,14 +96,26 @@ MonoBehaviour:
   m_MaxSpeed: 3
   m_Accel: 50
   m_Decel: 180
+  GM: {fileID: 0}
   bulletSpeed: 4
   bulletOfteness: 0.5
-  isWater: 0
+  isWater: 1
   spurt: {fileID: 114774174907247542, guid: d4fb5333dfa8743398c6271469e173bb, type: 2}
+--- !u!114 &114953306203208340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1634434005815888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a47eed7d0e4444808b12955b98bce5ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114992331744338408
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1634434005815888}
   m_Enabled: 1
@@ -109,7 +126,7 @@ MonoBehaviour:
 --- !u!212 &212860344548345850
 SpriteRenderer:
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1634434005815888}
   m_Enabled: 1
@@ -151,4 +168,3 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0

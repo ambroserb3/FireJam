@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class MapTile : MonoBehaviour {
 
-    public Sprite img;
-    public Sprite fireImg;
+    public GameObject FirePrefab;
     public float igniteTime;
     public int maxHealth; //how many spurts of water it needs to douse
 
+    public bool isLit = false;
     public MapTile[,] grid;
 
     public GameManager GM;
@@ -18,23 +18,16 @@ public class MapTile : MonoBehaviour {
     private int x;
     private int y;
 
-	// Use this for initialization
-	void Start () {
-        GetComponent<SpriteRenderer>().sprite = img;
-        transform.localScale = Constants.sizeScale * transform.localScale;
+	void Awake () {
 	}
 	
 
-    private void Ignite(){
-        GetComponent<SpriteRenderer>().sprite = fireImg;
-        GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sound/flame");
-        GetComponent<AudioSource>().Play();
-    }
-
-    private void Douse() {
-        GetComponent<SpriteRenderer>().sprite = img;
-        GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sound/extinguish");
-        GetComponent<AudioSource>().Play();
+    public void Ignite(){
+        if(!isLit){
+            GameObject fire = GameObject.Instantiate(FirePrefab, transform.position, transform.rotation);
+            fire.GetComponent<FireBehavior>().Init(this, grid);
+            isLit = true;
+        }
     }
 
     public void Init(int x, int y, MapTile[,] grid){

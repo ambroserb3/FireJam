@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour {
     private void Start() {
         lastShotTime = Time.time;
         lastMove = new Vector2(0,1);
-        transform.localScale = Constants.sizeScale * transform.localScale;
     }
 
     private void Update(){

@@ -9,7 +9,6 @@ public class waterspurt : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        transform.localScale = Constants.sizeScale * transform.localScale;
     }
 
     // Update is called once per frame
