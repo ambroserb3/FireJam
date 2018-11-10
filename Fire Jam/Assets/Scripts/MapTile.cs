@@ -32,7 +32,7 @@ public class MapTile : MonoBehaviour {
 
     public void Ignite(){
         if(!isLit){
-            GameObject fire = GameObject.Instantiate(FirePrefab, transform.position, transform.rotation);
+            GameObject fire = GameObject.Instantiate(FirePrefab, transform.position, transform.rotation, transform);
             fire.GetComponent<FireBehavior>().Init(this, grid);
             isLit = true;
         }

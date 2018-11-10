@@ -14,10 +14,14 @@ public class Waterspurt : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate () {
         transform.Translate(vel * Time.deltaTime, Space.World);
+        int x = (int)(transform.position.x+0.5f);
+		int y = (int)(transform.position.y+0.5f);
+		//grid[x,y].Burn();
     }
 
     public void SetDir(Vector2 move){
         vel = speed * move;
         transform.rotation = Quaternion.LookRotation(Vector3.forward, vel);
     }
+
 }

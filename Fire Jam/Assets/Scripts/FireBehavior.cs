@@ -39,4 +39,9 @@ public class FireBehavior : MonoBehaviour {
         GetComponent<AudioSource>().Play();
 	}
 
+	void OnTriggerEnter2D(Collider2D other){
+		if(other.gameObject.tag.Equals("Spurt")){
+			Debug.Log("Boom!");
+		}
+	}
 }

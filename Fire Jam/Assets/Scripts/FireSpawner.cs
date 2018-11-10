@@ -6,7 +6,6 @@ public class FireSpawner : MonoBehaviour {
 
 	private MapTile[,] grid;
 
-	
 	public int SpreadFreq = 1;
 	private float SpreadRate;
 
