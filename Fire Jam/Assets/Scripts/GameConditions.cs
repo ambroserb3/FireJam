@@ -15,10 +15,10 @@ public class GameConditions : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        bluePlayerHealth = Constants.playerHealth;
-        redPlayerHealth = Constants.playerHealth;
-        blueTowerHealth = Constants.towerHealth;
-        redTowerHealth = Constants.towerHealth;
+        //bluePlayerHealth = Constants.playerHealth;
+        //redPlayerHealth = Constants.playerHealth;
+        //blueTowerHealth = Constants.towerHealth;
+        //redTowerHealth = Constants.towerHealth;
 
         gameFinished = false;
         winner = -1; //We can just set this to 0 for blue winner, red otherwise
@@ -29,11 +29,11 @@ public class GameConditions : MonoBehaviour {
     {
         if (bluePlayerHealth == 0)
         {
-            respawn(bluePlayer); //TODO: This has not been implemented yet.
+            //respawn(bluePlayer); //TODO: This has not been implemented yet.
         }
         if (redPlayerHealth == 0)
         {
-            respawn(redPlayer); //TODO: Has not been implemented yet.
+            //respawn(redPlayer); //TODO: Has not been implemented yet.
         }
 
     }
