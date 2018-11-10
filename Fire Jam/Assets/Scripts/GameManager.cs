@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
+    public int fPosX;
+    public int fPosY;
 	// Use this for initialization
 	void Start () {
 		

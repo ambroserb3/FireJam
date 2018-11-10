@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField] public float m_Accel;
 	[SerializeField] public float m_Decel;
 
+    public GameManager GM;
+
     public float bulletSpeed;
     public float bulletOfteness;
     public bool isWater;
@@ -31,12 +33,14 @@ public class PlayerController : MonoBehaviour {
         lastShotTime = Time.time;
         lastMove = new Vector2(0,1);
         transform.localScale = Constants.sizeScale * transform.localScale;
-
     }
 
-    private void FixedUpdate()
-	{
-	}
+    private void Update(){
+        if (!isWater){
+            GM.fPosX = (int)transform.position.x;
+            GM.fPosY = (int)transform.position.y;
+        }
+    }
 
 
 	public void Move(Vector2 move)
