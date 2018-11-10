@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class waterspurt : MonoBehaviour {
+public class Waterspurt : MonoBehaviour {
 
     public float speed;
     private Vector3 vel;

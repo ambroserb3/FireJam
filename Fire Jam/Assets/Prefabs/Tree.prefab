@@ -6,17 +6,22 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: FirePrefab
+      value: 
+      objectReference: {fileID: 1613912222501060, guid: d708f9373cdd6446ab698ce0d074bbf6,
+        type: 2}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 0}
+  m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1379036799921140}
-  m_IsPrefabAsset: 1
+  m_IsPrefabParent: 0
 --- !u!1 &1379036799921140
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
+  serializedVersion: 5
   m_Component:
   - component: {fileID: 4757442476467816}
   - component: {fileID: 212804508658113134}
@@ -33,7 +38,7 @@ GameObject:
 --- !u!4 &4757442476467816
 Transform:
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1379036799921140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -46,7 +51,7 @@ Transform:
 --- !u!61 &61964101962408014
 BoxCollider2D:
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1379036799921140}
   m_Enabled: 1
@@ -59,7 +64,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -71,7 +76,7 @@ BoxCollider2D:
 --- !u!82 &82405714303564234
 AudioSource:
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1379036799921140}
   m_Enabled: 1
@@ -166,7 +171,7 @@ AudioSource:
 --- !u!114 &114395314847330412
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1379036799921140}
   m_Enabled: 1
@@ -174,14 +179,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd4ac8c6d451840e7ad8a01230c56ae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  img: {fileID: 21300000, guid: 8ebff4273db63469582a2e2b81c8a136, type: 3}
-  fireImg: {fileID: 21300000, guid: 2dd7d5315b1f540c18b6cd57833f6e8c, type: 3}
+  FirePrefab: {fileID: 1613912222501060, guid: d708f9373cdd6446ab698ce0d074bbf6, type: 2}
   igniteTime: 0
   maxHealth: 0
+  isLit: 0
+  GM: {fileID: 0}
 --- !u!212 &212804508658113134
 SpriteRenderer:
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1379036799921140}
   m_Enabled: 1
@@ -223,4 +229,3 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0

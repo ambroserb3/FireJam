@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour {
     public float bulletSpeed;
     public float bulletOfteness;
     public bool isWater;
-    public waterspurt spurt;
+    public Waterspurt spurt;
 
     private float lastShotTime;
 
@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour {
     public void Shoot(){
         float currTime = Time.time;
         if (currTime-lastShotTime> bulletOfteness && isWater){
-            waterspurt sput = Instantiate(spurt);
+            Waterspurt sput = Instantiate(spurt);
             sput.transform.position = transform.position;
             sput.SetDir(lastMove);
             lastShotTime = currTime;

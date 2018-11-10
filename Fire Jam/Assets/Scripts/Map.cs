@@ -8,6 +8,8 @@ public class Map : MonoBehaviour {
 	[SerializeField] private GameObject m_TilePrefab;
 	public MapTile[,] grid;
 
+	public GameObject[] TileList;
+
 	// Use this for initialization
 	void Awake () {
 		grid = new MapTile[m_MapSize, m_MapSize];
@@ -24,7 +26,8 @@ public class Map : MonoBehaviour {
 	}
 
 	private void spawnTile(int x, int y){
-		GameObject g = GameObject.Instantiate(m_TilePrefab, new Vector3(x,y,0), Quaternion.identity, transform);
+		int n = Random.Range(0, TileList.Length);
+		GameObject g = GameObject.Instantiate(TileList[n], new Vector3(x,y,0), Quaternion.identity, transform);
 		MapTile tile = g.GetComponent<MapTile>();
 		grid[x,y] = tile;
 		tile.Init(x, y, grid);
