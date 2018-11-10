@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114992331744338408}
   - component: {fileID: 95053270751592070}
   - component: {fileID: 114129308424131364}
+  - component: {fileID: 70638832911076378}
   m_Layer: 0
   m_Name: Water Player
   m_TagString: Untagged
@@ -43,6 +44,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &70638832911076378
+CapsuleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1634434005815888}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.003196164, y: 0.010867687}
+  m_Size: {x: 0.20110512, y: 0.11672646}
+  m_Direction: 1
 --- !u!95 &95053270751592070
 Animator:
   serializedVersion: 3

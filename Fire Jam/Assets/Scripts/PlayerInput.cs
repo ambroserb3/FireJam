@@ -36,7 +36,6 @@ public class PlayerInput : MonoBehaviour {
         }
 
         if (Input.GetButton("Shoot")){
-            m_Controller.Douse();
             m_Controller.Shoot();
         }
 	}

@@ -541,6 +541,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!70 &1499164819
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1499164817}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.003196164, y: 0.010867687}
+  m_Size: {x: 0.20110512, y: 0.11672646}
+  m_Direction: 1
 --- !u!1001 &1605865232
 Prefab:
   m_ObjectHideFlags: 0
@@ -579,6 +594,31 @@ Prefab:
     - target: {fileID: 4143746432457808, guid: 79d86ed7fc8884f08914a23c3cb28329, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 70441851782646044, guid: 79d86ed7fc8884f08914a23c3cb28329,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0.010867687
+      objectReference: {fileID: 0}
+    - target: {fileID: 70441851782646044, guid: 79d86ed7fc8884f08914a23c3cb28329,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.11672646
+      objectReference: {fileID: 0}
+    - target: {fileID: 70441851782646044, guid: 79d86ed7fc8884f08914a23c3cb28329,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.20110512
+      objectReference: {fileID: 0}
+    - target: {fileID: 70441851782646044, guid: 79d86ed7fc8884f08914a23c3cb28329,
+        type: 2}
+      propertyPath: m_Direction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 70441851782646044, guid: 79d86ed7fc8884f08914a23c3cb28329,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.003196164
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79d86ed7fc8884f08914a23c3cb28329, type: 2}
@@ -627,6 +667,7 @@ Prefab:
       propertyPath: isWater
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 70638832911076378, guid: b355aad58b06241f7beedf26ede8b342, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: b355aad58b06241f7beedf26ede8b342, type: 2}
   m_IsPrefabAsset: 0
