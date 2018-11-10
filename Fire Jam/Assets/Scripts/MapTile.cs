@@ -14,6 +14,7 @@ public class MapTile : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         GetComponent<SpriteRenderer>().sprite = img;
+        transform.localScale = Constants.sizeScale * transform.localScale;
 	}
 	
 	// Update is called once per frame

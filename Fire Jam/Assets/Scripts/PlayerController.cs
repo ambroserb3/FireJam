@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour {
     private void Start() {
         lastShotTime = Time.time;
         lastMove = new Vector2(0,1);
+        transform.localScale = Constants.sizeScale * transform.localScale;
+
     }
 
     private void FixedUpdate()
@@ -61,10 +63,12 @@ public class PlayerController : MonoBehaviour {
 	}
 
 
-    public void Move2(Vector2 move){
-        transform.rotation = Quaternion.LookRotation(Vector3.forward, move);
-        transform.Translate(move * m_MaxSpeed * Time.deltaTime, Space.World);
-        lastMove = move;
+    public void Move2(Vector2 move, bool isWaterMove){
+        if (isWaterMove == isWater){
+            transform.rotation = Quaternion.LookRotation(Vector3.forward, move);
+            transform.Translate(move * m_MaxSpeed * Time.deltaTime, Space.World);
+            lastMove = move;
+        }
     }
 
     public void Shoot(){

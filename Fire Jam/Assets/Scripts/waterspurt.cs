@@ -9,11 +9,11 @@ public class waterspurt : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void FixedUpdate () {
+        transform.localScale = Constants.sizeScale * transform.localScale;
+    }
+
+    // Update is called once per frame
+    void FixedUpdate () {
         transform.Translate(vel * Time.deltaTime, Space.World);
     }
 
