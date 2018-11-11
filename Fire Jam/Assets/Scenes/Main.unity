@@ -555,7 +555,7 @@ MonoBehaviour:
   m_MapSize: 16
   m_TilePrefab: {fileID: 1156864016883946, guid: 314545a7726dc43678bb35fa6263dafd,
     type: 2}
-  SpreadFreq: 1.5
+  SpreadFreq: 2
   TileList:
   - {fileID: 1856733056793222, guid: 54349126e5aec41f3a3ebdff4afcc0b3, type: 2}
   - {fileID: 1156864016883946, guid: 314545a7726dc43678bb35fa6263dafd, type: 2}

@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour {
             transform.rotation = Quaternion.LookRotation(Vector3.forward, move);
             transform.Translate(move * m_MaxSpeed * Time.deltaTime, Space.World);
             lastMove = move;
+            Constrain();
         }
     }
 
