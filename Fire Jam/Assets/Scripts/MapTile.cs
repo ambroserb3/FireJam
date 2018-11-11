@@ -8,7 +8,6 @@ public class MapTile : MonoBehaviour {
     public int igniteTime;
     public bool isLit = false;
     public MapTile[,] grid;
-
     public int spin;
 
     public List<MapTile> Adjacent;
@@ -17,8 +16,11 @@ public class MapTile : MonoBehaviour {
     private int x;
     private int y;
 
-	void Awake () {
+    private GameManager GM;
+
+	void Start () {
         fireHealth = igniteTime;
+        GM = GameObject.Find("Game Manager").GetComponent<GameManager>();
 	}
 
     public void Burn(){
@@ -41,7 +43,7 @@ public class MapTile : MonoBehaviour {
     public void Ignite(){
         if(!isLit){
             GameObject fire = GameObject.Instantiate(FirePrefab, transform.position, transform.rotation, transform);
-            fire.GetComponent<FireBehavior>().Init(this, grid);
+            fire.GetComponent<FireBehavior>().Init(this, grid, GM);
             fire.transform.Rotate(new Vector3(0,0,1), -spin*90);
             isLit = true;
         }

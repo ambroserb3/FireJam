@@ -6,21 +6,22 @@ public class FireBehavior : MonoBehaviour {
 
 	private MapTile tile;
 	private MapTile[,] grid;
+	private GameManager GM;
 
 	public float SpreadFreq = 1;
 	private float SpreadRate;
 
 
-	public void Init(MapTile tile, MapTile[,] grid){
+	public void Init(MapTile tile, MapTile[,] grid, GameManager GM){
 		this.tile = tile;
 		this.grid = grid;
-
+		this.GM = GM;
 		GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sound/flame");
         GetComponent<AudioSource>().Play();
 	}
 
 	void FixedUpdate(){
-		GameManager.score++;
+		GM.score++;
 	}
 
 	public void Extinguish(){

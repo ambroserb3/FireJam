@@ -145,9 +145,9 @@ MonoBehaviour:
     type: 2}
   FirePlayerPrefab: {fileID: 1252169717142522, guid: 5dffa755b4e3b9b40bfaf763279fd301,
     type: 2}
-  AvgNumFires: 20
+  AvgNumFires: 40
   NumFires: 0
-  WinThreshold: 20000
+  WinThreshold: 100000
 --- !u!4 &43021058
 Transform:
   m_ObjectHideFlags: 0
