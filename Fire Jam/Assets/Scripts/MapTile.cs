@@ -9,6 +9,8 @@ public class MapTile : MonoBehaviour {
     public bool isLit = false;
     public MapTile[,] grid;
 
+    public int spin;
+
     public List<MapTile> Adjacent;
     private int fireHealth;
 
@@ -40,6 +42,7 @@ public class MapTile : MonoBehaviour {
         if(!isLit){
             GameObject fire = GameObject.Instantiate(FirePrefab, transform.position, transform.rotation, transform);
             fire.GetComponent<FireBehavior>().Init(this, grid);
+            fire.transform.Rotate(new Vector3(0,0,1), -spin*90);
             isLit = true;
         }
     }
