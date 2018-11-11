@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour {
 	public int AvgNumFires;
 	public int NumFires;
 	public int WinThreshold;
-	public static int score;
+	public int score;
 	Slider scoreboard;
 
 	void Awake () {
