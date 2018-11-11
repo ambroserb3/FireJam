@@ -19,6 +19,10 @@ public class FireBehavior : MonoBehaviour {
         GetComponent<AudioSource>().Play();
 	}
 
+	void FixedUpdate(){
+		GameManager.score++;
+	}
+
 	public void Extinguish(){
 		tile.isLit = false;
 		GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Sound/extinguish");

@@ -6,8 +6,8 @@ public class FireSpawner : MonoBehaviour {
 
 	private MapTile[,] grid;
 
-	void Awake () {
-		grid = GameObject.FindWithTag("Map").GetComponent<Map>().grid;
+	void Start () {
+		grid = GameObject.Find("Map").GetComponent<Map>().grid;
 	}
 
 	
