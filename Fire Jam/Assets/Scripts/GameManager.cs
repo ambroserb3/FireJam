@@ -8,7 +8,11 @@ public class GameManager : MonoBehaviour {
 	public GameObject WaterPlayerPrefab;
 	public GameObject FirePlayerPrefab;
 
-	public int AvgNumFires;
+    public Image pane1;
+    public Image pane2;
+    public Text winText;
+
+    public int AvgNumFires;
 	public int NumFires;
 	public int WinThreshold;
 	public int score;
@@ -27,11 +31,18 @@ public class GameManager : MonoBehaviour {
 		scoreboard.value = score;
 		if(score >= WinThreshold){
 			// fire wins
-			Time.timeScale = 0;
+            pane1.enabled = true;
+            pane2.enabled = true;
+            winText.text = "Fireperson  Wins!!";
+            Time.timeScale = 0;
 		}
 		else if (score <= -WinThreshold){
-			// water wins
-			Time.timeScale = 0;
+            // water wins
+            pane1.enabled = true;
+            pane2.enabled = true;
+            winText.text = "Waterperson  Wins!!";
+            winText.color = Color.blue;
+            Time.timeScale = 0;
 		}
 	}
 }
