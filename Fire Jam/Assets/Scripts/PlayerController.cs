@@ -23,7 +23,6 @@ public class PlayerController : MonoBehaviour {
 
     private Vector2 lastMove;
 
-
     private void Start() {
         grid = GameObject.Find("Map").GetComponent<Map>().grid;
         lastShotTime = Time.time;
