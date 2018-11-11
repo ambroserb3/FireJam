@@ -147,7 +147,7 @@ MonoBehaviour:
     type: 2}
   AvgNumFires: 20
   NumFires: 0
-  WinThreshold: 10000
+  WinThreshold: 20000
 --- !u!4 &43021058
 Transform:
   m_ObjectHideFlags: 0
