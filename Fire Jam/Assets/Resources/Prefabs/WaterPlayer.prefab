@@ -103,7 +103,7 @@ MonoBehaviour:
   m_MaxSpeed: 3
   m_Accel: 50
   m_Decel: 180
-  pushup: 0
+  pushup: 0.3
   GM: {fileID: 0}
   bulletSpeed: 4
   bulletFreq: 10

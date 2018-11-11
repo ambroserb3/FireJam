@@ -571,7 +571,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 671712858}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -597,7 +597,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fireperson    Wins!!
+  m_Text: 
 --- !u!222 &671712861
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -653,7 +653,7 @@ MonoBehaviour:
   - {fileID: 1856733056793222, guid: 54349126e5aec41f3a3ebdff4afcc0b3, type: 2}
   - {fileID: 1156864016883946, guid: 314545a7726dc43678bb35fa6263dafd, type: 2}
   - {fileID: 1013992610639678, guid: f098773001a3e4fe69dff636c18cf91d, type: 2}
-  - {fileID: 1379036799921140, guid: afbb914305679483ca1334541172d524, type: 2}
+  - {fileID: 1729987736802898, guid: dc4a5a58ddb154960acc1e819e5245dd, type: 2}
 --- !u!1 &881178125
 GameObject:
   m_ObjectHideFlags: 0
