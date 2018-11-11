@@ -7,7 +7,6 @@ public class Waterspurt : MonoBehaviour {
     public float speed;
     private Vector3 vel;
     public MapTile[,] grid;
-
     private int oldX;
     private int oldY;
 

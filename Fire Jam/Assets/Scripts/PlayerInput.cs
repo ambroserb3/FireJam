@@ -35,8 +35,5 @@ public class PlayerInput : MonoBehaviour {
             m_Controller.MoveF(directionF.normalized);
         }
 
-        if (Input.GetButton("Shoot")){
-            m_Controller.Shoot();
-        }
 	}
 }

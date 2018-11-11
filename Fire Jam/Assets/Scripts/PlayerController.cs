@@ -22,8 +22,8 @@ public class PlayerController : MonoBehaviour {
     private Vector2 lastMove;
 
 
-    private void Awake() {
-        grid = GameObject.FindWithTag("Map").GetComponent<Map>().grid;
+    private void Start() {
+        grid = GameObject.Find("Map").GetComponent<Map>().grid;
         lastShotTime = Time.time;
         lastMove = new Vector2(0,1);
         bulletRate = 1f/bulletFreq;
