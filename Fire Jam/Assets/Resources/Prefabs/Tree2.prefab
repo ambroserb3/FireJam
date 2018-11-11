@@ -140,6 +140,7 @@ MonoBehaviour:
   FirePrefab: {fileID: 1613912222501060, guid: d708f9373cdd6446ab698ce0d074bbf6, type: 2}
   igniteTime: 10
   isLit: 0
+  spin: 0
   Adjacent: []
 --- !u!212 &212072756445147368
 SpriteRenderer:

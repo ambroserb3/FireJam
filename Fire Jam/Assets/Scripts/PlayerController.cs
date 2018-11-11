@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField] public float m_Accel;
 	[SerializeField] public float m_Decel;
 
+    public float pushup;
+
     public GameManager GM;
 
     public float bulletSpeed;
@@ -72,6 +74,7 @@ public class PlayerController : MonoBehaviour {
         if (currTime-lastShotTime> bulletRate && isWater){
             Waterspurt sput = Instantiate(spurt);
             sput.Init(transform.position, lastMove, grid);
+            sput.transform.position = sput.transform.position + pushup * new Vector3( lastMove.x, lastMove.y, 0);
             lastShotTime = currTime;
         }
     }
