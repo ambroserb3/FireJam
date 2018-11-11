@@ -39,8 +39,11 @@ public class Map : MonoBehaviour {
 	private void spawnTile(int x, int y){
 		int n = Random.Range(0, TileList.Length);
 		GameObject g = GameObject.Instantiate(TileList[n], new Vector3(x,y,0), Quaternion.identity, transform);
-		MapTile tile = g.GetComponent<MapTile>();
+        int spin = Random.Range(0, 4);
+        MapTile tile = g.GetComponent<MapTile>();
 		grid[x,y] = tile;
+        grid[x,y].transform.Rotate(new Vector3(0,0,1), 90*spin);
+        grid[x,y].spin = spin;
 		tile.Init(x, y, grid);
 	}
 }
