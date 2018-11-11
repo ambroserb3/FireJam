@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using UnityEngine.Networking;
 
-public class PlayerInput : MonoBehaviour {
+public class PlayerInput : NetworkBehaviour {
 
 	private PlayerController m_Controller;
 
@@ -17,23 +18,29 @@ public class PlayerInput : MonoBehaviour {
 
 	void Update()
 	{
-        // Read the inputs.
-        Vector2 directionW = new Vector2();
-        directionW += new Vector2 (CrossPlatformInputManager.GetAxis("wHor"), 
-                                   CrossPlatformInputManager.GetAxis("wVert"));
+        if (isServer) {
+            // Read the inputs.
+            Vector2 directionW = new Vector2();
+            directionW += new Vector2(CrossPlatformInputManager.GetAxis("wHor"),
+                                       CrossPlatformInputManager.GetAxis("wVert"));
 
-        Vector2 directionF = new Vector2();
-        directionF += new Vector2(CrossPlatformInputManager.GetAxis("fHor"), 
-                                  CrossPlatformInputManager.GetAxis("fVert"));
-
-        // Pass all parameters to the character control script.
-        if(directionW.magnitude > epsilon){
-            m_Controller.MoveW(directionW.normalized);
+            // Pass all parameters to the character control script.
+            if (directionW.magnitude > epsilon)
+            {
+                m_Controller.MoveW(directionW.normalized);
+            }
         }
+        if (!isServer)
+        {
+            Vector2 directionF = new Vector2();
+            directionF += new Vector2(CrossPlatformInputManager.GetAxis("fHor"),
+                                      CrossPlatformInputManager.GetAxis("fVert"));
 
-        if(directionF.magnitude > epsilon){
-            m_Controller.MoveF(directionF.normalized);
+            if (directionF.magnitude > epsilon)
+            {
+                m_Controller.MoveF(directionF.normalized);
+
+            }
         }
-
 	}
 }
