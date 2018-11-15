@@ -24,10 +24,11 @@ public class GameManager : MonoBehaviour {
 		scoreboard = GetComponentInChildren<Slider>();
 		scoreboard.maxValue = WinThreshold;
 		scoreboard.minValue = -WinThreshold;
-		score = 0;
-	}
-	void FixedUpdate () {
-		score -= AvgNumFires;
+        score = 0;
+    } 
+
+    void FixedUpdate () {
+        score -= AvgNumFires;
 		scoreboard.value = score;
 		if(score >= WinThreshold){
 			// fire wins

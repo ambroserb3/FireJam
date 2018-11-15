@@ -148,7 +148,7 @@ MonoBehaviour:
   pane1: {fileID: 1792601648}
   pane2: {fileID: 1303992626}
   winText: {fileID: 671712860}
-  AvgNumFires: 10
+  AvgNumFires: 30
   NumFires: 0
   WinThreshold: 100000
   score: 0
