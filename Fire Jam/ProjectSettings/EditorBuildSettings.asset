@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScene.unity
     guid: 92149a28c3aad07438c4c88aa106cddc
   - enabled: 0
-    path: Assets/Scenes/Matchmaking.unity
-    guid: 9829bd6cb8d83104583ebc2705c19efc
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 2b5b5640789cb48da9225eb67667c008

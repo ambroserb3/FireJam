@@ -1,19 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class FireSpawner : MonoBehaviour {
+public class FireSpawner : NetworkBehaviour {
 
 	private MapTile[,] grid;
 
 	void Start () {
-		grid = GameObject.Find("Map").GetComponent<Map>().grid;
 	}
 
 	
-	void FixedUpdate() {
-		int x = (int)(transform.position.x+0.5f);
-		int y = (int)(transform.position.y+0.5f);
-		grid[x,y].Ignite();
-	}
+	void FixedUpdate() { 
+        //CmdFireSpew();
+    }
+
+    [ClientRpc]
+    public void RpcFireSpew()
+    {
+        grid = GameObject.Find("Map").GetComponent<Map>().grid;
+
+        int x = (int)(transform.position.x + 0.5f);
+        int y = (int)(transform.position.y + 0.5f);
+        grid[x, y].Ignite();
+    }
+
+    [Command]
+    public void CmdFireSpew()
+    {
+        RpcFireSpew();
+        //grid = GameObject.Find("Map").GetComponent<Map>().grid;
+
+        //int x = (int)(transform.position.x + 0.5f);
+        //int y = (int)(transform.position.y + 0.5f);
+        //grid[x, y].Ignite();
+    }
 }

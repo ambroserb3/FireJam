@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : NetworkBehaviour {
 
     [SerializeField] public float m_MaxSpeed;                    // The fastest the player can travel.
 	[SerializeField] public float m_Accel;
@@ -50,6 +51,8 @@ public class PlayerController : MonoBehaviour {
             transform.rotation = Quaternion.LookRotation(Vector3.forward, move);
             transform.Translate(move * m_MaxSpeed * Time.deltaTime, Space.World);
             Constrain();
+            FireSpawner fspawn = this.GetComponent<FireSpawner>();
+            fspawn.CmdFireSpew();
         }
     }
 

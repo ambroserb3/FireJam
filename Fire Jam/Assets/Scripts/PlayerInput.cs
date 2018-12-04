@@ -18,9 +18,16 @@ public class PlayerInput : NetworkBehaviour {
 
 	void Update()
 	{
-        if (isServer) {
-            // Read the inputs.
-            Vector2 directionW = new Vector2();
+
+        //Is this mine??
+        if (isLocalPlayer == false)
+        {
+            //this object belongs to another player
+            return;
+        }
+
+        // Read the inputs.
+        Vector2 directionW = new Vector2();
             directionW += new Vector2(CrossPlatformInputManager.GetAxis("wHor"),
                                        CrossPlatformInputManager.GetAxis("wVert"));
 
@@ -29,9 +36,8 @@ public class PlayerInput : NetworkBehaviour {
             {
                 m_Controller.MoveW(directionW.normalized);
             }
-        }
-        if (!isServer)
-        {
+        
+        
             Vector2 directionF = new Vector2();
             directionF += new Vector2(CrossPlatformInputManager.GetAxis("fHor"),
                                       CrossPlatformInputManager.GetAxis("fVert"));
@@ -41,6 +47,6 @@ public class PlayerInput : NetworkBehaviour {
                 m_Controller.MoveF(directionF.normalized);
 
             }
-        }
+        
 	}
 }

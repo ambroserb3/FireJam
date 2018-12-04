@@ -1,16 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class FireBehavior : MonoBehaviour {
+
+public class FireBehavior : NetworkBehaviour {
 
 	private MapTile tile;
 	private MapTile[,] grid;
 	private GameManager GM;
-
-	public float SpreadFreq = 1;
-	private float SpreadRate;
-
 
 	public void Init(MapTile tile, MapTile[,] grid, GameManager GM){
 		this.tile = tile;
@@ -21,7 +19,7 @@ public class FireBehavior : MonoBehaviour {
 	}
 
 	void FixedUpdate(){
-		GM.score++;
+		GM.score += 2;
 	}
 
 	public void Extinguish(){
